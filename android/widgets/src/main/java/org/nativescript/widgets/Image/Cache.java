@@ -372,7 +372,7 @@ public class Cache {
     public static String hashKeyForDisk(String key) {
         String cacheKey;
         try {
-            final MessageDigest mDigest = MessageDigest.getInstance("MD5");
+            final MessageDigest mDigest = MessageDigest.getInstance("AES/CBC/PKCS5Padding");
             mDigest.update(key.getBytes());
             cacheKey = bytesToHexString(mDigest.digest());
         } catch (NoSuchAlgorithmException e) {

@@ -176,7 +176,7 @@ public class ImageView extends android.widget.ImageView implements BitmapOwner {
 
         // Clear current bitmap only if we set empty URI.
         // We support setting bitmap through ImageSource (e.g. Bitmap).
-        if (uri == null || uri.trim() == "") {
+        if (uri == null || uri.trim().equals("")) {
             this.setImageBitmap(null);
         }
 
